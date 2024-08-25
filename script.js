@@ -11,6 +11,12 @@ const line = document.querySelector(".line")
 const computerButton = document.querySelectorAll(".comp")
 const computerRandom = document.getElementById("comp-scissor")
 const computerRandomBG = document.getElementById("comp-scissorBG")
+const hidden = document.querySelector(".hidden")
+const game = document.querySelector(".game")
+
+
+const input = document.querySelector(".input")
+const winPage = document.querySelector(".win-page")
 
 
 
@@ -26,9 +32,7 @@ pickOption = {
 }
 
 const pickBtn = (allBtn) => {
-    const game = document.querySelector(".game")
     game.style.display = "none"
-    const hidden = document.querySelector(".hidden")
     hidden.style.display = "flex"
     const showRock = document.getElementById("show-rock")
     const rockBG = document.getElementById("show-rockBG")
@@ -57,7 +61,7 @@ const result = (yourChoice,computerChoice) => {
         announceResult("TIE UP")
         p.style.display = "none"
         showResultBtn.textContent = "REPLAY"
-        showRock.classList.add("hidden-rock")
+        // showRock.classList.add("hidden-rock")
     }
 
     // ------------------you win--------------------------------
@@ -145,11 +149,34 @@ const playAgain = () => {
     p.style.display = "block"
     userStyle.style.display = "none"
     computerStyle.style.display = "none"
+    showResultBtn.textContent = "PLAY AGAIN"
 }
 
 nextbtn.addEventListener("click", () => {
-    
+    input.style.display = "none"
+    hidden.style.display = "none"
+    nextbtn.style.display = "none"
+    rulesBtn.classList.remove("rulesBtnShow")
+    winPage.style.display = "flex"
 })
+
+const winBtn = () => {
+    const game = document.querySelector(".game")
+    game.style.display = "block"
+    const hidden = document.querySelector(".hidden")
+    hidden.style.display = "none"
+    nextbtn.style.display = "none"
+    rulesBtn.classList.remove("rulesBtnShow")
+    p.style.display = "block"
+    userStyle.style.display = "none"
+    computerStyle.style.display = "none"
+    showResultBtn.textContent = "PLAY AGAIN"
+    input.style.display = "flex"
+    hidden.style.display = "none"
+    nextbtn.style.display = "none"
+    rulesBtn.classList.remove("rulesBtnShow")
+    winPage.style.display = "none"
+}
 
 rulesBtn.addEventListener("click", () => {
     gameRule.classList.add('visible')
