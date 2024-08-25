@@ -81,9 +81,6 @@ html,body{
     font-size: 3.5rem;
 }
 /* --------------------------------------game-------------------------------------- */
-/* .game{
-    display: none;
-} */
 .line-1{
     position: absolute;
     left: 46%;
@@ -399,16 +396,16 @@ html,body{
 @keyframes colour 
 {
     0% {
-        box-shadow: 0 0 0 0 rgba(0, 100, 0, 0.8); /* Dark green */
+        box-shadow: 0 0 0 0 rgba(0, 100, 0, 0.8); 
     }
     25% {
-        box-shadow: 0 0 0 15px rgba(0, 100, 0, 0.5); /* Mid-dark green */
+        box-shadow: 0 0 0 15px rgba(0, 100, 0, 0.5); 
     }
     50% {
-        box-shadow: 0 0 0 30px rgba(0, 128, 0, 0.456); /* Medium green */
+        box-shadow: 0 0 0 30px rgba(0, 128, 0, 0.456); 
     }
     100% {
-        box-shadow: 0 0 0 40px rgba(144, 238, 144, 0.345); /* Light green */
+        box-shadow: 0 0 0 40px rgba(144, 238, 144, 0.345); 
     }
 }  
 

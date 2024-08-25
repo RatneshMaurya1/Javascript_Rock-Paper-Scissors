@@ -13,8 +13,6 @@ const computerRandom = document.getElementById("comp-scissor")
 const computerRandomBG = document.getElementById("comp-scissorBG")
 const hidden = document.querySelector(".hidden")
 const game = document.querySelector(".game")
-
-
 const input = document.querySelector(".input")
 const winPage = document.querySelector(".win-page")
 
