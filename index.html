@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>Rock,Paper and Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+ <!-- ---------------------------score----------------------------------------------------------------- -->
+    
+    <div class="container">
+      <div class="input">
+        <div class="input-text">
+          <p>ROCK</p>
+          <p>PAPER</p>
+          <p>SCISSORS</p>
+        </div>
+        <div class="score">
+          <div class="computer">
+            <p>COMPUTER</p>
+            <p>SCORE</p>
+            <p id="computerScore">0</p>
+          </div>
+          <div class="your">
+            <p>YOUR</p>
+            <p>SCORE</p>
+            <p id="yourScore">0</p>
+          </div>
+        </div>
+      </div>
+
+<!-- ---------------------------------------game--------------------------------------------- -->
+      <div class="game">
+        <div class="line">
+          <img class="line-3" src="./images/Line 3.png" alt="Line-1" />
+          <img class="line-1" src="./images/Line 1.png" alt="Line-2" />
+          <img class="line-2" src="./images/Line 2.png" alt="Line-3" />
+        </div>
+      <div class="playing-button">
+        <div class="allBtn rock1">
+        <img id="rock"  src="./images/ROCK.png" onclick="pickBtn('rock')" alt="Rock">
+        <img class="main-img-1" src="./images/rockBG.png" alt="Group-1" >
+      </div>
+      <div class="allBtn paper1">
+        <img id="paper" src="./images/PAPER.png" alt="paper" onclick="pickBtn('paper')">
+        <img class="main-img-3" src="./images/paperBG.png" alt="Group-3" >
+      </div>
+      <div class="allBtn scissor1">
+        <img id="scissors" src="./images/SCISSOR.png" alt="scissors" onclick="pickBtn('scissor')">
+        <img class="main-img-2" src="./images/scissorBG.png" alt="Group-2" >
+      </div>
+      </div>
+    </div>
+
+
+
+    <!-- ---------------------------------hidden------------------------------------- -->
+
+    <div class="hidden">
+      <div class="you-picked">
+        <div class="you">
+           <p>YOU PICKED</p>
+        </div>
+        <div>
+          
+          <div>
+        <img class="hidden-rock" id="show-rock" src="./images/ROCK.png" alt="Rock">
+      </div>
+      <img id="show-rockBG" src="./images/rockBG.png" alt="Group-1" >
+      
+      </div>
+      </div>
+      <div class="show-result">
+        <h1 class="result-text">YOU WIN</h1>
+        <p >AGAINST PC</p>
+        <button onclick="playAgain()">PLAY AGAIN</button>
+      </div>
+      <div class="computer-picked">
+        <div class="pc">
+          <p>PC PICKED</p>
+        </div>
+        
+        <img class="hidden-scissor" id="comp-scissor" src="./images/SCISSOR.png" alt="scissors">
+      
+      <img id="comp-scissorBG" src="./images/scissorBG.png" alt="Group-2" >
+
+      </div>
+      <div class="user-ellipse">
+        <img src="./images/Ellipse 4.png" alt="ellipse">
+      </div>
+      <div class="pc-ellipse">
+        <img src="./images/Ellipse 4.png" alt="ellipse">
+      </div>
+    </div>
+
+
+
+ <!-- ---------------------------- rules-------------------------------- -->
+
+    <div class="RULES">
+      <div class="game-rule">
+        <h1>Game Rules</h1>
+        <div class="list">
+          <div class="emoji">
+            <div class="div1">🟨</div>
+            <div>🟨</div>
+            <div>🟨</div>
+            <div>🟨</div>
+          </div>
+          <div class="all-rules">
+            <div>Rock beats scissors, scissors beat paper, and paper beats rock.</div>
+            <div>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</div>
+            <div>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</div>
+            <div>If both players lay down the same hand, each player lays down another hand</div>
+          </div>
+        </div>
+      </div>
+      <div class="X">
+      <img class="close" src="./images/X.png" alt="X">
+    </div>
+    <button class="rulesbtn" id="btn">RULES</button>
+    <button class="nextbtn" id="btn">NEXT</button>
+    </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>
