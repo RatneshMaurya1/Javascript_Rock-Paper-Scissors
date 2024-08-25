@@ -13,7 +13,7 @@ html,body{
 /* ----------------------------------score------------------------------ */
 
 .container{
-    min-height: 100vh;
+    height: 100%;
     width: 100%;
     background-color:#8CC461;
     position: relative;
@@ -360,29 +360,62 @@ html,body{
     z-index: 2;
 }
 .user-ellipse{
+    display: none;
     position: absolute;
-    left: 15.5%;
-    top: 26%;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    background-color: #fff;
+    left: 406px;
+    top: 48.2%;
     z-index: 1;
     display: none;
+    animation: colour 4s infinite;
+    visibility: hidden;
 }
+.user-ellipse.show-user-ellipse{
+    visibility: visible;
+}
+
 .pc-ellipse{
+    display: none;
     position: absolute;
-    left: 54.5%;
-    top: 26%;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    background-color: #fff;
+    left: 1006px;
+    top: 48.2%;
     z-index: 1;
     display: none;
+    animation: colour 4s infinite;
+    visibility: hidden;
 }
+.pc-ellipse.show-pc-ellipse{
+    visibility: visible;
+}
+
+
+@keyframes colour 
+{
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 100, 0, 0.8); /* Dark green */
+    }
+    25% {
+        box-shadow: 0 0 0 15px rgba(0, 100, 0, 0.5); /* Mid-dark green */
+    }
+    50% {
+        box-shadow: 0 0 0 30px rgba(0, 128, 0, 0.456); /* Medium green */
+    }
+    100% {
+        box-shadow: 0 0 0 40px rgba(144, 238, 144, 0.345); /* Light green */
+    }
+}  
+
+
+
 .win-page{
     display: none;
-}
-.stars img{
-    height: 50%;
-    width: 40%;
-    position: absolute;
-    top: 10%;
-    left: 30%;
-
 }
 .victory img{
     height: 27%;
@@ -425,4 +458,99 @@ html,body{
     position: absolute;
     top: 76%;
     left: 37.2%;
+}
+.stars{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    display: none;
+}
+
+.stars div{
+    position: absolute;
+    display: block;
+}
+.stars div:nth-child(1){
+    left: 20%;
+    animation: falling 15s linear infinite;
+    animation-delay: 0s;
+    z-index: 10;
+}
+.stars div:nth-child(2){
+    left: 50%;
+    animation: falling 20s linear infinite;
+    animation-delay: 0s;
+    z-index: 10;
+}
+.stars div:nth-child(3){
+    left: 5%;
+    animation: falling 20s linear infinite;
+    animation-delay: 0s;
+    z-index: 10;
+}
+.stars div:nth-child(4){
+    left: 35%;
+    animation: falling 10s linear infinite;
+    animation-delay: 0s;
+    z-index: 10;
+}
+.stars div:nth-child(5){
+    left: 65%;
+    animation: falling 5s linear infinite;
+    animation-delay: 0s;
+    z-index: 10;
+}
+.stars div:nth-child(6){
+    left: 80%;
+    animation: falling 15s linear infinite;
+    animation-delay: 0s;
+    z-index: 10;
+}
+.stars div:nth-child(7){
+    left: 13%;
+    animation: falling 10s linear infinite;
+    animation-delay: 0s;
+    z-index: 10;
+}
+.stars div:nth-child(8){
+    left: 95%;
+    animation: falling 15s linear infinite;
+    animation-delay: 0s;
+    z-index: 10;
+}
+@keyframes falling
+{
+    0%
+    {
+        opacity: 0;
+        top: -10%;
+        transform: translateY(20px) rotate(0deg);
+    }
+    10%{
+        opacity: 1;
+    }
+    20%
+    {
+        transform: translateY(-20px) rotate(45deg);
+    }
+    40%
+    {
+        transform: translateY(-20px) rotate(90deg);
+    }
+    60%
+    {
+        transform: translateY(20px) rotate(180deg);
+    }
+    80%
+    {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100%
+    {
+        top: 110%;
+        transform: translateY(-20px) rotate(225deg);
+    }
 }

@@ -61,7 +61,6 @@ const result = (yourChoice,computerChoice) => {
         announceResult("TIE UP")
         p.style.display = "none"
         showResultBtn.textContent = "REPLAY"
-        // showRock.classList.add("hidden-rock")
     }
 
     // ------------------you win--------------------------------
@@ -72,6 +71,7 @@ const result = (yourChoice,computerChoice) => {
         rulesBtn.classList.add("rulesBtnShow")
         nextbtn.style.display = "block"
         userStyle.style.display = "block"
+        userStyle.classList.add("show-user-ellipse")
     }
     
     if(yourChoice == "scissor" && computerChoice == "paper"){
@@ -80,6 +80,7 @@ const result = (yourChoice,computerChoice) => {
         rulesBtn.classList.add("rulesBtnShow")
         nextbtn.style.display = "block"
         userStyle.style.display = "block"
+        userStyle.classList.add("show-user-ellipse")
     }
     if(yourChoice == "paper" && computerChoice == "rock"){
         announceResult("YOU WIN")
@@ -87,6 +88,7 @@ const result = (yourChoice,computerChoice) => {
         rulesBtn.classList.add("rulesBtnShow")
         nextbtn.style.display = "block"
         userStyle.style.display = "block"
+        userStyle.classList.add("show-user-ellipse")
     }
 
     // --------------------computer win-------------------------------
@@ -95,17 +97,20 @@ const result = (yourChoice,computerChoice) => {
         announceResult("YOU LOST")
         pcScore(scoreComputer += 1)
         computerStyle.style.display = "block"
+        computerStyle.classList.add("show-pc-ellipse")
     }
     
     if(yourChoice == "scissor" && computerChoice == "rock"){
         announceResult("YOU LOST")
         pcScore(scoreComputer += 1)
         computerStyle.style.display = "block"
+        computerStyle.classList.add("show-pc-ellipse")
     }
     if(yourChoice == "paper" && computerChoice == "scissor"){
         announceResult("YOU LOST")
         pcScore(scoreComputer += 1)
         computerStyle.style.display = "block"
+        computerStyle.classList.add("show-pc-ellipse")
     }
 }
 const announceResult = (result) => {
@@ -151,13 +156,14 @@ const playAgain = () => {
     computerStyle.style.display = "none"
     showResultBtn.textContent = "PLAY AGAIN"
 }
-
+const stars = document.querySelector(".stars")
 nextbtn.addEventListener("click", () => {
     input.style.display = "none"
     hidden.style.display = "none"
     nextbtn.style.display = "none"
     rulesBtn.classList.remove("rulesBtnShow")
     winPage.style.display = "flex"
+    stars.style.display = "block"
 })
 
 const winBtn = () => {
