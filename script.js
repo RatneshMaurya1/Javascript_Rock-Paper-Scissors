@@ -28,14 +28,21 @@ pickOption = {
     "paper":["./images/PAPER.png","./images/paperBG.png"],
     "scissor":["./images/SCISSOR.png","./images/scissorBG.png"],
 }
+const rockBG = document.getElementById("show-rockBG")
+const compBg = document.getElementById("comp-scissorBG")
+const classRockBg = document.querySelector(".yourBG")
 
 const pickBtn = (allBtn) => {
     game.style.display = "none"
     hidden.style.display = "flex"
     const showRock = document.getElementById("show-rock")
-    const rockBG = document.getElementById("show-rockBG")
+    const showComp = document.getElementById("comp-scissor")
     showRock.src = pickOption[allBtn][0]
     rockBG.src = pickOption[allBtn][1]
+    showRock.style.display = "block"
+    rockBG.style.display = "block"
+    showComp.style.display = "block"
+    compBg.style.display = "block"
     let choice = pcPick(allBtn)
     result(allBtn,choice)
 }
@@ -59,6 +66,10 @@ const result = (yourChoice,computerChoice) => {
         announceResult("TIE UP")
         p.style.display = "none"
         showResultBtn.textContent = "REPLAY"
+        showRock.style.display = "block"
+        classRockBg.classList.add("yourBG")
+        showComp.style.display = "block"
+        compBg.classList.add("compBg")
     }
 
     // ------------------you win--------------------------------
