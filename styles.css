@@ -72,7 +72,7 @@
   }
  .game{
     height: 70%;
-    width: 100%;
+    max-width: 100%;
     position: relative;
   }
 .line-1{
@@ -643,7 +643,11 @@
       left: 40%;
     }
   }
-  
+  @media(max-width:1200px){
+    .game{
+      max-width: 1200px;
+    }
+  }
   
   @media (max-width: 480px) {
     .input {
