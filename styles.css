@@ -70,61 +70,64 @@
     color: #000;
     font-size: 3.5rem;
   }
- 
+ .game{
+    height: 70%;
+    width: 100%;
+    position: relative;
+  }
 .line-1{
-    position: absolute;
-    left: 46%;
-    top: 53%;
+  position: absolute;
+  left: 46%;
+  top: 23%;
 } 
 .line-2{
-    position: absolute;
-    top: 62%;
-    left: 52%;
+  position: absolute;
+  top: 32%;
+  left: 52%;
 }
 .line-3{
-    position: absolute;
-    top: 62%;
-    left: 43.5%; 
+  position: absolute;
+  top: 32%;
+  left: 43.5%; 
 }
 
 .main-img-1{
-    position: absolute;
-    left: 36.8%;
-    top: 43%;
+  position: absolute;
+  left: 36.8%;
+  top: 10%;
 }
 .main-img-2{
-    position: absolute;
-    top: 43%;
-    left: 52.5%;
+  position: absolute;
+  top: 10%;
+  left: 52.5%;
 }
 
 .main-img-3{
-    position: absolute;
-    left: 44.3%;
-    top: 70%;
+  position: absolute;
+  left: 44.3%;
+  top: 45%;
 }
 #rock{
-    position: absolute;
-    top: 49.4%;
-    left: 39.5%;
-    z-index: 3;
-    cursor: pointer;
+  position: absolute;
+  top: 20%;
+  left: 39.5%;
+  z-index: 3;
+  cursor: pointer;
 }
 #paper{
-    position: absolute;
-    top: 76%;
-    left: 47.5%;
-    z-index: 3;
-    cursor: pointer;
+  position: absolute;
+  top: 54%;
+  left: 47.5%;
+  z-index: 3;
+  cursor: pointer;
 }
 #scissors{
-    position: absolute;
-    top: 49.7%;
-    left: 56.5%;
-    z-index: 3;
-    cursor: pointer;
+  position: absolute;
+  top: 20%;
+  left: 56.5%;
+  z-index: 3;
+  cursor: pointer;
 }
-
 
   .rulesbtn,
   .nextbtn {
